@@ -1,12 +1,10 @@
 package com.example;
-
-import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -14,26 +12,25 @@ public class LionAlexTest {
 
     @Mock
     Lion lion;
-
     @InjectMocks
     LionAlex lionAlex;
 
-
     @Test
-    public void AlexGetKittensNull(){
+    public void alexGetKittensNull(){
       int resultKittens = lionAlex.getKittens();
-       Assert.assertEquals(0, resultKittens);
+       assertEquals(0, resultKittens);
    }
 
    @Test
-    public void AlexGetThreeFriends(){
+    public void alexGetThreeFriends(){
        List<String> resultThreeFriends = lionAlex.getFriends();
-       Assert.assertEquals(List.of("Марти", "Глория", "Мелман"), resultThreeFriends);
+       assertEquals(List.of("Марти", "Глория", "Мелман"), resultThreeFriends);
    }
 
    @Test
-    public void AlexLivesNewYorkZoo(){
+    public void alexLivesNewYorkZoo(){
        String resultAlexLives = lionAlex.getPlaceOfLiving();
-       Assert.assertEquals("Нью-Йоркский зоопарк", resultAlexLives);
+       assertEquals("Нью-Йоркский зоопарк", resultAlexLives);
    }
+
 }

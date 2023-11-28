@@ -1,5 +1,5 @@
 package com.example;
-import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +12,6 @@ public class LionParameterizedTest {
 
     @Mock
     Feline feline;
-
     @Before
     public void init() {
         MockitoAnnotations.initMocks(this);
@@ -35,9 +34,7 @@ public class LionParameterizedTest {
     public void  lionHasManeTrueAndLionessHasManeFalse() throws Exception {
         Lion lion = new Lion(sex, feline);
         Boolean resultHasMane = lion.doesHaveMane();
-        Assert.assertEquals(expectedHasMane, resultHasMane);
+        assertEquals(expectedHasMane, resultHasMane);
     }
-
-
 
 }

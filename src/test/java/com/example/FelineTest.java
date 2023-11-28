@@ -32,7 +32,7 @@ public class FelineTest {
     @Test
     public void felineGetKittensDefault(){
         int resultGetKittens = feline.getKittens();
-        Assert.assertEquals(1, resultGetKittens);
+        assertEquals(1, resultGetKittens);
     }
 
 }

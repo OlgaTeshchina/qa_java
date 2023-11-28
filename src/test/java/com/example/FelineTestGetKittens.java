@@ -1,8 +1,5 @@
 package com.example;
-
-import com.example.Feline;
-import com.example.Predator;
-import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +12,6 @@ import org.mockito.MockitoAnnotations;
 public class FelineTestGetKittens {
     @Mock
     Predator predator;
-
     @InjectMocks
     private Feline feline;
 
@@ -45,6 +41,7 @@ public class FelineTestGetKittens {
     @Test
     public void felineGetKittensDifferentQuantities(){
         int resultGetKittens = feline.getKittens(kittensCount);
-        Assert.assertEquals(expectedResult, resultGetKittens);
+        assertEquals(expectedResult, resultGetKittens);
     }
+
 }
