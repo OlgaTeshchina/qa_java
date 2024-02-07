@@ -1,2 +1,4 @@
 # qa_java
-QA Java Project
+Юнит-тесты( Jacoco, Mockito и JUnit, параметризация).
+Класс Lion не зависит от класса Feline. Код написан с инъекцией зависимости.
+Классы Feline, Cat и Lion покрыты тестами на 100%
